@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@mipmap/bg_login_ocapp"
-    tools:context="cl.philipsoft.ocapp.LoginActivity">
+    tools:context="cl.philipsoft.ocapp.views.login.LoginActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,6 +13,7 @@
         android:orientation="vertical">
 
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/emailTil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="e-Mail">
@@ -25,6 +26,7 @@
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
+            android:id="@+id/passwdTil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Contraseña">

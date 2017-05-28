@@ -5,5 +5,5 @@ package cl.philipsoft.ocapp.network;
  */
 
 public class OCApi {
-    protected static final String BASE_URL = "https://ocapi.philipsoft.cl";
+    protected static final String BASE_URL = "https://oca.philipsoft.cl/api/";
 }
