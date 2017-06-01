@@ -16,7 +16,8 @@
             android:id="@+id/emailTil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="e-Mail">
+            android:background="#80BBDEFB"
+            android:hint="@string/email">
 
             <EditText
                 android:id="@+id/emailEt"
@@ -29,7 +30,8 @@
             android:id="@+id/passwdTil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Contraseña">
+            android:background="#70BBDEFB"
+            android:hint="@string/password">
 
             <EditText
                 android:id="@+id/passwordEt"
@@ -41,11 +43,12 @@
     </LinearLayout>
 
     <Button
-        android:layout_marginBottom="10dp"
         android:id="@+id/loginBt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="@string/login_button"/>
+        android:layout_marginBottom="50dp"
+        android:background="#70BBDEFB"
+        android:text="@string/login_button" />
 
 </RelativeLayout>

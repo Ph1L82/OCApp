@@ -4,5 +4,9 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="login_button">Login</string>
+    <string name="email">e-Mail</string>
+    <string name="password">Password</string>
+    <string name="mail_format_error">Yor email address is misformatted or not valid.</string>
+    <string name="required_field">This field is required.</string>
 
 </resources>

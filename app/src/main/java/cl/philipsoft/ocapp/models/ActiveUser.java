@@ -6,10 +6,10 @@ import com.orm.SugarRecord;
  * Created by phil_ on 24-05-2017.
  */
 
-public class User extends SugarRecord {
-    private String email, password, api_token;
+public class ActiveUser extends SugarRecord {
+    private String email, name, api_token;
 
-    public User() {
+    public ActiveUser() {
     }
 
     public String getEmail() {
@@ -20,12 +20,12 @@ public class User extends SugarRecord {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
+    public String getName() {
+        return name;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getApi_token() {
