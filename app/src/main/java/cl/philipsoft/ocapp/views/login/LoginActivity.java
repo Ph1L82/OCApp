@@ -3,6 +3,7 @@ package cl.philipsoft.ocapp.views.login;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -79,6 +80,7 @@ public class LoginActivity extends AppCompatActivity implements SessionCallback 
     @Override
     public void success(ActiveUser user) {
         Toast.makeText(this, user.getName() + " logged with tokn: " + user.getApi_token(), Toast.LENGTH_SHORT).show();
+        Log.d("OCAPP", "USERNAME: " + user.getName() + " EMAIL: " + user.getEmail() + " API_TOKEN: " + user.getApi_token());
         // TODO: 31-05-2017 start service to get: accounts, budget, last purchase orders
 
     }
