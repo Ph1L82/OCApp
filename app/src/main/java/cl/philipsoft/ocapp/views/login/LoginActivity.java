@@ -81,7 +81,7 @@ public class LoginActivity extends AppCompatActivity implements SessionCallback 
     public void success(ActiveUser user) {
         Toast.makeText(this, user.getName() + " logged with tokn: " + user.getApi_token(), Toast.LENGTH_SHORT).show();
         Log.d("OCAPP", "USERNAME: " + user.getName() + " EMAIL: " + user.getEmail() + " API_TOKEN: " + user.getApi_token());
-        // TODO: 31-05-2017 start service to get: accounts, budget, last purchase orders
+        // TODO: 31-05-2017 start service to get: accounts, budget, last purchase orders, while SplashActivity displays a progressbar of some kind.
 
     }
 

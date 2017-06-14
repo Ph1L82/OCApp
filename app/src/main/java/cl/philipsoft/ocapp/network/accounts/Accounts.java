@@ -11,5 +11,5 @@ import retrofit2.http.Query;
 
 public interface Accounts {
     @GET("accounts")
-    Call<Account> get(@Query("api_token") String api_token);
+    Call<Account[]> get(@Query("api_token") String api_token);
 }

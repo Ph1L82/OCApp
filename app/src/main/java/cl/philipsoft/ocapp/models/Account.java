@@ -1,8 +1,10 @@
 package cl.philipsoft.ocapp.models;
 
+import com.orm.SugarRecord;
+
 import java.sql.Timestamp;
 
-public class Account {
+public class Account extends SugarRecord {
     private int code;
     private String name;
     private String type;

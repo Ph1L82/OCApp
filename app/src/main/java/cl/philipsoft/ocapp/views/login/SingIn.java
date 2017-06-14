@@ -62,7 +62,6 @@ public class SingIn extends RequestCode {
 
                     @Override
                     public void onFailure(Call<ActiveUser> call, Throwable t) {
-
                         Log.d("OCAPP", "ERROR: " + t.getMessage());
                         callback.failed();
                     }

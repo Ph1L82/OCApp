@@ -1,8 +1,10 @@
 package cl.philipsoft.ocapp.models;
 
+import com.orm.SugarRecord;
+
 import java.sql.Timestamp;
 
-public class PaymentMethod {
+public class PaymentMethod extends SugarRecord{
     private Long id;
     private String name;
     private Timestamp updated_at, created_at, deleted_at;

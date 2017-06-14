@@ -1,4 +1,4 @@
-package cl.philipsoft.ocapp.network.accounts;
+package cl.philipsoft.ocapp.network.paymentMethods;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -15,9 +15,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by phil_ on 13-06-2017.
  */
 
-public class AccountInterceptor extends OCApi{
+public class PaymentMethodInterceptor extends OCApi {
 
-    public Accounts get() {
+    public PaymentMethods get() {
     /*This is very common in gets cause increase the response time wait and add headers and does retrys*/
         OkHttpClient.Builder httpClient = new OkHttpClient.Builder()
                 .connectTimeout(60, TimeUnit.SECONDS)
@@ -51,9 +51,8 @@ public class AccountInterceptor extends OCApi{
                 .client(client)
                 .build();
 
-        Accounts account = interceptor.create(Accounts.class);
+        PaymentMethods paymentMethods = interceptor.create(PaymentMethods.class);
 
-        return account;
+        return paymentMethods;
     }
-
 }
