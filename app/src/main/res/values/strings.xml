@@ -9,4 +9,6 @@
     <string name="mail_format_error">Yor email address is misformatted or not valid.</string>
     <string name="required_field">This field is required.</string>
 
+    <string name="title_activity_splash">SplashActivity</string>
+
 </resources>

@@ -1,6 +1,8 @@
 package cl.philipsoft.ocapp.views.login;
 
 
+import android.util.Log;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -45,8 +47,12 @@ public class SingIn {
                 call.enqueue(new Callback<ActiveUser>() {
                     @Override
                     public void onResponse(Call<ActiveUser> call, Response<ActiveUser> response) {
+                        Log.d("OCAPP", "onResponse: CODE:" + response.code());
+                        Log.d("OCAPP", "onResponse: " + response.raw());
                         if (200 == response.code() && response.isSuccessful()) {
+                            Log.d("OCAPP", "Response Body: " + response.body());
                             ActiveUser user = response.body();
+//                            ActiveUser user = new ActiveUser( "erodriguez@unosalud.com", "Eduardo Javier Alejandro Rodríguez Bahamonde", "15decfc042b5213baa8e9427ba6840f7");
                             user.save();
                             callback.success(user);
                         } else {
@@ -56,6 +62,8 @@ public class SingIn {
 
                     @Override
                     public void onFailure(Call<ActiveUser> call, Throwable t) {
+
+                        Log.d("OCAPP", "ERROR: " + t.getMessage());
                         callback.failed();
                     }
                 });

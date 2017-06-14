@@ -12,6 +12,12 @@ public class ActiveUser extends SugarRecord {
     public ActiveUser() {
     }
 
+    public ActiveUser(String email, String name, String api_token) {
+        this.email = email;
+        this.name = name;
+        this.api_token = api_token;
+    }
+
     public String getEmail() {
         return email;
     }
