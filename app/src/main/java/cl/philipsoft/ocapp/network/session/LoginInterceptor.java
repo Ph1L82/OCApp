@@ -9,6 +9,7 @@ import javax.net.ssl.SSLContext;
 import javax.net.ssl.TrustManagerFactory;
 
 import cl.philipsoft.ocapp.R;
+import cl.philipsoft.ocapp.network.OCApi;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -17,9 +18,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by phil_ on 31-05-2017.
  */
 
-public class LoginInterceptor {
-
-    protected static final String BASE_URL = "https://oca.philipsoft.cl/api/";
+public class LoginInterceptor extends OCApi{
 
     public Session get() {
         Retrofit interceptor = new Retrofit.Builder()

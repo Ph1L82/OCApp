@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity implements SessionCallback 
                 emailTil.setVisibility(View.GONE);
                 passwdTil.setVisibility(View.GONE);
                 loginBt.setVisibility(View.GONE);
-
+// TODO: 13-06-2017 check if CurrentUser i already logged in , check if token is valid, if not login. If it is, goto Main
                 new SingIn(LoginActivity.this).toServer(email, passwd);
             }
         });

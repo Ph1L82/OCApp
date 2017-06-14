@@ -7,6 +7,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import cl.philipsoft.ocapp.models.ActiveUser;
+import cl.philipsoft.ocapp.network.RequestCode;
 import cl.philipsoft.ocapp.network.session.LoginInterceptor;
 import cl.philipsoft.ocapp.network.session.Session;
 import retrofit2.Call;
@@ -17,7 +18,7 @@ import retrofit2.Response;
  * Created by phil_ on 24-05-2017.
  */
 
-public class SingIn {
+public class SingIn extends RequestCode {
     private SessionCallback callback;
 
     public SingIn(SessionCallback callback) {
@@ -49,10 +50,9 @@ public class SingIn {
                     public void onResponse(Call<ActiveUser> call, Response<ActiveUser> response) {
                         Log.d("OCAPP", "onResponse: CODE:" + response.code());
                         Log.d("OCAPP", "onResponse: " + response.raw());
-                        if (200 == response.code() && response.isSuccessful()) {
+                        if (OK == response.code() && response.isSuccessful()) {
                             Log.d("OCAPP", "Response Body: " + response.body());
                             ActiveUser user = response.body();
-//                            ActiveUser user = new ActiveUser( "erodriguez@unosalud.com", "Eduardo Javier Alejandro Rodríguez Bahamonde", "15decfc042b5213baa8e9427ba6840f7");
                             user.save();
                             callback.success(user);
                         } else {
