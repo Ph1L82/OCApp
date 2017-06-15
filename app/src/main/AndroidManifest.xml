@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cl.philipsoft.ocapp">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name="com.orm.SugarApp"
@@ -14,13 +14,21 @@
         android:theme="@style/AppTheme">
 
         <!-- SUGAR -->
-        <meta-data android:name="DATABASE" android:value="SOCApp.db" />
-        <meta-data android:name="VERSION" android:value="1" />
-        <meta-data android:name="QUERY_LOG" android:value="true" />
-        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="cl.philipsoft.ocapp.models" />
+        <meta-data
+            android:name="DATABASE"
+            android:value="SOCApp.db" />
+        <meta-data
+            android:name="VERSION"
+            android:value="1" />
+        <meta-data
+            android:name="QUERY_LOG"
+            android:value="true" />
+        <meta-data
+            android:name="DOMAIN_PACKAGE_NAME"
+            android:value="cl.philipsoft.ocapp.models" />
 
         <activity
-            android:name="cl.philipsoft.ocapp.views.login.LoginActivity"
+            android:name=".views.login.LoginActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
             android:theme="@style/FullscreenTheme.NoActionBar">
@@ -39,7 +47,11 @@
             android:name=".views.SplashActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_splash"
-            android:theme="@style/FullscreenTheme"/>
+            android:theme="@style/FullscreenTheme" />
+
+        <service
+            android:name=".background.services.AccountService"
+            android:exported="false"></service>
     </application>
 
 </manifest>
