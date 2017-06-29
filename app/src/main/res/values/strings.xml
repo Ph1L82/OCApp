@@ -8,7 +8,15 @@
     <string name="password">Password</string>
     <string name="mail_format_error">Yor email address is misformatted or not valid.</string>
     <string name="required_field">This field is required.</string>
-
+    <string name="pending_orders_tab">Pending</string>
+    <string name="history_orders_tab">History</string>
+    <string name="budget_tab">Budget</string>
     <string name="title_activity_splash">SplashActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
