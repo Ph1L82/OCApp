@@ -1,0 +1,64 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="3dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="3dp"
+    card_view:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:id="@+id/provider_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Provider's Company Name wich may be a huge name Spa."
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/provider_RUT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/provider_name"
+            android:layout_marginTop="3dp"
+            android:text="76.330.772-1"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/order_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/provider_RUT"
+            android:layout_marginTop="2dp"
+            android:text="A lot of important stuff, and this text also could be a lot of lines, in wich case the order cost should be below it"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/order_creation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/order_description"
+            android:layout_marginTop="3dp"
+            android:text="28/06/2017" />
+
+        <TextView
+            android:id="@+id/order_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/order_description"
+            android:layout_marginTop="3dp"
+            android:text="$12.345.678.-" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
