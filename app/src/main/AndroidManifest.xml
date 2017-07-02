@@ -62,6 +62,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="cl.philipsoft.ocapp.views.login.LoginActivity" />
         </activity>
+
+        <service
+            android:name=".background.services.OrderService"
+            android:exported="false"></service>
     </application>
 
 </manifest>
