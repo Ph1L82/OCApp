@@ -4,9 +4,21 @@
     android:layout_height="match_parent"
     tools:context="cl.philipsoft.ocapp.views.tabs.OrdersFragment">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_recycler_view"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/ordersReloadSR"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp">
 
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ordersRv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
 </RelativeLayout>

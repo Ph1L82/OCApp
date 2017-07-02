@@ -17,7 +17,7 @@ import cl.philipsoft.ocapp.views.tabs.OrdersFragment;
  */
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
-    Context context;
+    private Context context;
 
     public SectionsPagerAdapter(FragmentManager fm) {
         super(fm);
@@ -25,8 +25,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-
-        switch (position){
+        switch (position) {
             case 0:
                 OrdersFragment ordersFragment = new OrdersFragment();
                 return ordersFragment;
@@ -37,9 +36,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
             default:
                 return OrdersFragment.newInstance();
         }
-        // getItem is called to instantiate the fragment for the given page.
-        // Return a PlaceholderFragment (defined as a static inner class below).
-//        return MainActivity.PlaceholderFragment.newInstance(position + 1);
     }
 
     @Override

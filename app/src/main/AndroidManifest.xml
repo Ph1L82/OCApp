@@ -56,7 +56,12 @@
         <activity
             android:name=".views.MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:parentActivityName=".views.login.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="cl.philipsoft.ocapp.views.login.LoginActivity" />
+        </activity>
     </application>
 
 </manifest>

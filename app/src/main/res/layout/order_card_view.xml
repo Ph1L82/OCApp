@@ -15,7 +15,7 @@
         android:layout_margin="10dp">
 
         <TextView
-            android:id="@+id/provider_name"
+            android:id="@+id/oc_provider_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="My Provider's Company Name wich may be a huge name Spa."
@@ -23,41 +23,41 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/provider_RUT"
+            android:id="@+id/oc_provider_RUT"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/provider_name"
+            android:layout_below="@+id/oc_provider_name"
             android:layout_marginTop="3dp"
             android:text="76.330.772-1"
             android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/order_description"
+            android:id="@+id/oc_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/provider_RUT"
+            android:layout_below="@+id/oc_provider_RUT"
             android:layout_marginTop="2dp"
             android:text="A lot of important stuff, and this text also could be a lot of lines, in wich case the order cost should be below it"
             android:textSize="12sp" />
 
         <TextView
-            android:id="@+id/order_creation"
+            android:id="@+id/oc_creation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_below="@id/order_description"
+            android:layout_below="@id/oc_description"
             android:layout_marginTop="3dp"
             android:text="28/06/2017" />
 
         <TextView
-            android:id="@+id/order_cost"
+            android:id="@+id/oc_cost"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_below="@id/order_description"
+            android:layout_below="@id/oc_description"
             android:layout_marginTop="3dp"
             android:text="$12.345.678.-" />
     </RelativeLayout>
