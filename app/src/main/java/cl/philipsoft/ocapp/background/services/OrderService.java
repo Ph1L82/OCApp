@@ -20,7 +20,7 @@ public class OrderService extends IntentService {
     }
 
 
-    public static void startActionOrders(Context context, String param1, String param2) {
+    public static void startActionOrders(Context context) {
         Intent intent = new Intent(context, OrderService.class);
         intent.setAction(ACTION_ORDERS);
         context.startService(intent);

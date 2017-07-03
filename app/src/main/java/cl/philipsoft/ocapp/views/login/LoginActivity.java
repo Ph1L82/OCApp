@@ -1,5 +1,6 @@
 package cl.philipsoft.ocapp.views.login;
 
+import android.database.SQLException;
 import android.os.Bundle;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,9 @@ import android.widget.Toast;
 import com.crashlytics.android.Crashlytics;
 
 import cl.philipsoft.ocapp.R;
+import cl.philipsoft.ocapp.background.asynctasks.GetAccounts;
+import cl.philipsoft.ocapp.background.services.AccountService;
+import cl.philipsoft.ocapp.background.services.OrderService;
 import cl.philipsoft.ocapp.models.ActiveUser;
 import io.fabric.sdk.android.Fabric;
 
@@ -82,7 +86,8 @@ public class LoginActivity extends AppCompatActivity implements SessionCallback 
         Toast.makeText(this, user.getName() + " logged with tokn: " + user.getApi_token(), Toast.LENGTH_SHORT).show();
         Log.d("OCAPP", "USERNAME: " + user.getName() + " EMAIL: " + user.getEmail() + " API_TOKEN: " + user.getApi_token());
         // TODO: 31-05-2017 start service to get: accounts, budget, last purchase orders, while SplashActivity displays a progressbar of some kind.
-
+        AccountService.startActionAccounts(this);
+        OrderService.startActionOrders(this);
     }
 
     @Override

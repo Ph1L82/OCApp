@@ -42,6 +42,8 @@ public class OrdersInterceptor extends OCApi{
             }
         });
 
+//        Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd HH:mm:ss").create();
+
         OkHttpClient client = httpClient.build();
 
         Retrofit interceptor = new Retrofit.Builder()

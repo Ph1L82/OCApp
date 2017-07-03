@@ -11,11 +11,31 @@ import java.sql.Timestamp;
 public class Order extends SugarRecord {
     private int order_id;
     private Author author;
-    private Timestamp created_at, updated_at, deleted_at, approved, disapproved;
+    private Timestamp created_at, approved, disapproved;
     private Provider provider;
     private String description, approved_by, disapproved_by;
     private Item[] items;
     private double sub_total, iva, total;
+
+    public Order(int order_id, Author author, Timestamp created_at, Timestamp approved, Timestamp disapproved, Provider provider, String description, String approved_by, String disapproved_by, Item[] items, double sub_total, double iva, double total) {
+        this.order_id = order_id;
+        this.author = author;
+        this.created_at = created_at;
+        this.approved = approved;
+        this.disapproved = disapproved;
+        this.provider = provider;
+        this.description = description;
+        this.approved_by = approved_by;
+        this.disapproved_by = disapproved_by;
+        this.items = items;
+        this.sub_total = sub_total;
+        this.iva = iva;
+        this.total = total;
+    }
+
+    public Order() {
+
+    }
 
     public int getOrder_id() {
         return order_id;
@@ -39,22 +59,6 @@ public class Order extends SugarRecord {
 
     public void setCreated_at(Timestamp created_at) {
         this.created_at = created_at;
-    }
-
-    public Timestamp getUpdated_at() {
-        return updated_at;
-    }
-
-    public void setUpdated_at(Timestamp updated_at) {
-        this.updated_at = updated_at;
-    }
-
-    public Timestamp getDeleted_at() {
-        return deleted_at;
-    }
-
-    public void setDeleted_at(Timestamp deleted_at) {
-        this.deleted_at = deleted_at;
     }
 
     public Timestamp getApproved() {
@@ -135,28 +139,5 @@ public class Order extends SugarRecord {
 
     public void setTotal(double total) {
         this.total = total;
-    }
-
-    public Order(int order_id, Author author, Timestamp created_at, Timestamp updated_at, Timestamp deleted_at, Timestamp approved, Timestamp disapproved, Provider provider, String description, String approved_by, String disapproved_by, Item[] items, double sub_total, double iva, double total) {
-
-        this.order_id = order_id;
-        this.author = author;
-        this.created_at = created_at;
-        this.updated_at = updated_at;
-        this.deleted_at = deleted_at;
-        this.approved = approved;
-        this.disapproved = disapproved;
-        this.provider = provider;
-        this.description = description;
-        this.approved_by = approved_by;
-        this.disapproved_by = disapproved_by;
-        this.items = items;
-        this.sub_total = sub_total;
-        this.iva = iva;
-        this.total = total;
-    }
-
-    public Order() {
-
     }
 }

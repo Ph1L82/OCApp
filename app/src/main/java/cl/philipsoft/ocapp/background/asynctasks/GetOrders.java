@@ -35,19 +35,19 @@ public class GetOrders extends AsyncTask<String, Integer, Integer> {
     }
 
     private int lastPage(Call<OrdersWrapper> call) {
-        int lastPage =0;
+        int lastPage = 0;
         try {
             Response<OrdersWrapper> response = call.execute();
-            code=response.code();
-            if (RequestCode.OK == code && response.isSuccessful()){
+            code = response.code();
+            if (RequestCode.OK == code && response.isSuccessful()) {
                 OrdersWrapper wrapper = response.body();
-                if (wrapper!=null&&wrapper.getData().length>0){
+                if (wrapper != null && wrapper.getData().length > 0) {
                     new OrdersData().handler(wrapper.getData());
                     lastPage = wrapper.getLast_page();
-                }else{
+                } else {
                     code = 878470;
                 }
-            }else {
+            } else {
                 Log.d("GETORDERS", "Request code: " + String.valueOf(code));
             }
         } catch (IOException e) {
